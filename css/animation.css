@@ -1,0 +1,159 @@
+.hero_area {
+    opacity: 0;
+    transform: translateY(15px);
+    /* Start slightly below */
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.hero_area.active {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Initial state for carousel items */
+.carousel-item {
+    opacity: 0;
+    transform: translateX(20%);
+    /* Start from the right */
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+/* Active state for carousel items */
+.carousel-item.active {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move to original position */
+}
+
+/* Add animation delay to each carousel item */
+.carousel-item:nth-child(1) {
+    animation: ease-in 0.5s forwards;
+    animation-delay: 0s;
+}
+
+.carousel-item:nth-child(2) {
+    animation: ease-in 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.carousel-item:nth-child(3) {
+    animation: ease-in 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+
+/* Optional: Adding a smooth fade for carousel indicators */
+.carousel-indicators1 {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.carousel-inner:hover .carousel-indicators {
+    opacity: 1;
+}
+
+/* Style for Service Section */
+
+/* Initial state for all elements */
+.service_section .box {
+    opacity: 0;
+    transform: translateY(-30px);
+    /* Start from above */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Fade-in animation for each box */
+.service_section .box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Fade-in animation for the "View More" button */
+.service_section .btn-box {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Start from below */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Delay for the "View More" button */
+.service_section .btn-box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Keyframes for box fade-in */
+@keyframes fadeInBox {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for the "View More" button fade-in */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for About Us section elements */
+.about_section .detail-box,
+.about_section .img-box {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Start from below */
+    transition: opacity 2s ease-in, transform 2s ease-in;
+}
+
+/* Fade-in animation when scrolled into view */
+.about_section .detail-box.fade-in,
+.about_section .img-box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to the original position */
+}
+
+
+/* Case Section  */
+
+
+/* Initial state for each box */
+.case_section .box {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Start from below */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Fade-in animation when scrolled into view */
+.case_section .box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+/* Optional: Stagger the delay slightly for each box */
+.case_section .box:nth-child(1) {
+    transition-delay: 0.5s;
+    /* Delay for the first box */
+}
+
+.case_section .box:nth-child(2) {
+    transition-delay: 1s;
+    /* Delay for the second box */
+}
